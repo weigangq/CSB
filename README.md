@@ -1,4 +1,4 @@
-# CSB
+# CSB Fork for BIOL425 @Hunter College, New York City
 
 Git repository accompanying the book:
 
