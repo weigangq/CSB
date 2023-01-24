@@ -29,11 +29,11 @@ When you install `Git`, the program `GitBash` is installed automatically. Open `
 
 The terminal should open in your home folder. Type
 
-`git clone https://github.com/CSB-book/CSB.git`
+`git clone https://github.com/weigangq/CSB-BIOL425.git`
 
 The command downloads all the material on your computer. To make sure you everything went well, type:
 
-`ls CSB/`
+`ls CSB-BIOL425/`
 
 If you see a list of directories, everything is good. You can close the terminal.
 
