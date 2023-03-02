@@ -1,0 +1,57 @@
+LOCUS       MK622931                 660 bp    DNA     linear   MAM 09-OCT-2019
+DEFINITION  Balaenoptera borealis hemoglobin A (HBA) gene, complete cds.
+ACCESSION   MK622931
+VERSION     MK622931.1  GI:1756479396
+KEYWORDS    .
+SOURCE      Balaenoptera borealis (sei whale)
+  ORGANISM  Balaenoptera borealis
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Laurasiatheria; Artiodactyla; Whippomorpha;
+            Cetacea; Mysticeti; Balaenopteridae; Balaenoptera.
+REFERENCE   1  (bases 1 to 660)
+  AUTHORS   Larsen,K., Fluegel,B., Jeppesen,M., Joergensen,H. and Olsen,M.T.
+  TITLE     Molecular cloning of hemoglobin subunit A (HBA) from sei whale
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 660)
+  AUTHORS   Larsen,K., Fluegel,B., Jeppesen,M., Joergensen,H. and Olsen,M.T.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (12-MAR-2019) Department of Molecular Biology and
+            Genetics, Molecular Biology, C.F. Mollers Alle 3, Aarhus C 8000,
+            Danmark
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..660
+                     /organism="Balaenoptera borealis"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9768"
+                     /tissue_type="muscle"
+     gene            <1..>660
+                     /gene="HBA"
+     mRNA            join(<1..95,202..406,532..>660)
+                     /gene="HBA"
+                     /product="hemoglobin A"
+     CDS             join(1..95,202..406,532..660)
+                     /gene="HBA"
+                     /codon_start=1
+                     /product="hemoglobin A"
+                     /protein_id="QFF91579.1"
+                     /db_xref="GI:1756479397"
+                     /translation="MVLFPADKSNVKATWAKIGNHGAEYGAEALERMFMNFPSTKTYF
+                     PHFDLGHDSAQVKGHGKKVADALTKAAGHMDNLLDALSDLSDLHAHKLRVDPVNFKLL
+                     SHCLLVTLALHLPAEFTPSVHASLDKFLASVSTVLTSKYR"
+ORIGIN      
+        1 atggtgctgt ttcccgccga caagagcaac gtcaaggcca cctgggctaa gattggcaac
+       61 cacggtgcag agtatggcgc agaggccttg gagaggtgag cagcccacct gcctggctgg
+      121 gaccggggcc ggtcgcccca tcgcgtcctg gtcctgggcc gaccggccta agcccggctc
+      181 tcccgcctct tctccactca ggatgttcat gaacttcccc agcaccaaga cctacttccc
+      241 ccacttcgac ctgggacacg actccgccca ggtcaagggc cacggcaaga aggtggccga
+      301 cgcgctgacc aaagccgctg gccacatgga caacctgctc gatgccttgt ctgatctgag
+      361 tgacctgcac gcccacaagc tgcgtgtgga cccggtcaac ttcaaggtga gctcgcgggc
+      421 cgggccggga gagatctgag ctaggaaggc agagagtgcg gtggggctcc agaggtggag
+      481 cacggcggtg ccccccaacc ccacgccccc tgacaccccc tctctccgca gctcctgagc
+      541 cactgcctgc tggtgaccct ggctctccac ctccccgccg agttcacccc ctcggtccat
+      601 gcctccctgg acaagttctt ggccagtgtg agcaccgtgc tgacctccaa ataccgttaa
+//
+
