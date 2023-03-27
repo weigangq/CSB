@@ -1,3 +1,32 @@
+Count data obtained through email to the author:
+
+3/27/2023
+Marra, Nicholas <nmarra@govst.edu>
+
+Hello Dr. Qiu,
+
+Thank you for your patience and understanding regarding your request. I was able to locate the computer with the files that included the count tables for that paper. I have attached them here as both an excel and text file. 
+
+I will note that the files were run on DESeq back in 2013 at the end of my PhD and I know that DESeq has had some updates since then but I think they should still have the same results. The only other note is that some genes had their symbols get a little odd when the file was opened in excel before exporting the table as text for DESeq. In particular I know that septin genes got interpreted as dates in September so where I noticed this I changed the symbol from the normal uniprot format to the number-sep so that it would stop getting interpreted as a date.
+
+Please let me know if this is not the file that you are looking for and/or if you have any questions and I can track down what notes I have now that I have that computer and back up and know that they are still functional. 
+
+Thank you for your interest and I hope that your class is able to use it and that it is useful for teaching.
+
+Sincerely,
+
+Nick Marra
+
+ 
+Nicholas Marra, Ph.D.
+Assistant Professor 
+Division of Science, Mathematics and Technology
+Governors State University
+University Park, IL 60484
+he/him/his
+
+
+
 Data published by:
 Marra NJ, DeWoody JA (2014) Transcriptomic characterization of the immunogenetic repertoires of heteromyid rodents. BMC Genomics 15: 929. http://dx.doi.org/10.1186/1471-2164-15-929
 

@@ -2,9 +2,16 @@
 ## and processes the image to return the projected leaf area of
 ## green plants on a light background
 
+library(OpenImageR)
+
+if (!requireNamespace ("BiocManager", quietly = TRUE))
+  install.packages ("BiocManager")
+#BiocManager::install ("EBImage")
+library(EBImage)
+
 getArea <- function(f) {
-    i <- normalize(readImage(paste("../data/leafarea/", f, sep="")))
-    i <- i + 0.05 # adjust brighness
+    i <- normalize(readImage(paste("r/data/leafarea/", f, sep="")))
+    i <- i + 0.05 # adjust brightness
     # extract the three RGB channels
     dr <- as.vector(i[,, 1])
     dg <- as.vector(i[,, 2])
