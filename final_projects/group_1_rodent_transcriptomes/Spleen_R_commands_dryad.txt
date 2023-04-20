@@ -1,0 +1,49 @@
+##Below are the R commands used to produce the DESeq results reported for the paper associated with this data package.
+##It should be noted that these commands largely follow the manual from DESeq and readers should refer back to this manual before attempting to replicate
+##this analysis.  These commands are from an analysis run on 11/10/13.  > refers to a command, # is a comment about what the preceding command does.
+##The guide to the R analysis and the manual for the program can be found on the bioconductor webpage for DESeq: http://bioconductor.org/packages/release/bioc/html/DESeq.html
+
+>source("http://bioconductor.org/biocLite.R")
+>biocLite("DESeq")
+#install DESeq
+>library("DESeq")
+#now you can use it for this session
+> datafile=read.table("Count_table_spleen.txt", header=TRUE, row.names=1)
+> head(datafile)
+#get data from file in your working directory, this must be a table with the gene names in one column and for each sample in the other columns
+> datadesign=data.frame(
++ row.names=colnames(datafile),
++ condition=c("desert", "desert", "desert", "desert", "desert", "desert", "desert", "desert","mesic","mesic","mesic", "mesic"),
++ species=c("Dipodomys", "Dipodomys", "Dipodomys", "Dipodomys", "Chaetodipus", "Chaetodipus", "Chaetodipus", "Chaetodipus", "Heteromys", "Heteromys", "Heteromys", "Heteromys")
++ )
+#has design of experiment, this is the data structure that has the information about what treatment each column of the table belongs to.
+> countTable=datafile
+#this is where the counts for each sample at each gene are in
+> condition=datadesign$species
+#This defines what aspect of the experimental design should be used to group treatments, so here since it is $species, the first four columns are replicates of the group 'Dipodomys', the second four columns are of the group 'Chaetodipus', and the final 4 columns are replicates of 'Heteromys' 
+> cds=newCountDataSet(countTable,condition)
+#makes data structure for DESeq with information on the counts (countTable) and how they should be grouped (condition)
+> cds=estimateSizeFactors(cds)
+> sizeFactors(cds)
+#estimate library size and correction of counts for the library size for each column
+> cds=estimateDispersions(cds)
+#estimates variance
+> res1=nbinomTest(cds,"Dipodomys", "Heteromys")
+#This command conducts the negative binomial test to test for differences in gene expression and between Dipodomys and Heteromys.  Those results are saved in res1
+> res1_sig=res1[res1$padj<.05,]
+#This filters the res1 data for only genes that have a padj<.05, then it assigns that data to res1_sig
+> write.csv(res1_sig, file="significant_genes_DESeq_Dspec_Hdesm.csv")
+#The results are exported to this file
+> res2=nbinomTest(cds,"Chaetodipus", "Heteromys")
+#Negative binomial test of differences between Chaetodipus and Heteromys
+> res2_sig=res2[res2$padj<.05,]
+> write.csv(res2_sig, file="significant_genes_DESeq_C_bail_Hdesm.csv")
+> res3=nbinomTest(cds,"Chaetodipus", "Dipodomys")
+#Negative binomial test of differences between Chaetodipus and Dipodomys
+> res3_sig=res3[res3$padj<.05,]
+> write.csv(res3_sig, file="significant_genes_DESeq_C_bail_Dspec.csv")
+> save.image("DESeq_R_workspace")
+#saves this this workspace, in the end we process the results by looking at the three exported res_sig files and are most interested in the cases where genes are present in both res1_sig and res2_sig since these are the temperate latitude species vs. the tropical species.
+
+##References:
+## Simon Anders and Wolfgang Huber. Differential expression analysis for sequence count data. Genome Biology, 11:R106, 2010.
