@@ -1,0 +1,143 @@
+[
+Wed Jun 17 12:30:39 2015: Loaded from /home/mikaelyan/Desktop/tree.tree
+Sat Aug 15 15:00:42 2015: tree_tree saved to /home/mikaelyan/Dropbox/Higher termites - Diversity/Higher termites submission - ME/Revision/Dryad_upload/Dryad_CoII_tree.ntree
+]
+((((((((((((((((((('Nasutitermes matangensiformis, AB109489':0.01357,
+'Nasutitermes takasagoensis, AB005575':0.00194
+)0:0.00000,
+'Nasutitermes takasagoensis Nt142, KT184473':0.00000
+)100:0.05814,
+(('Nasutitermes_corniger Nc150, AIZ68286':0.00000,
+'Nasutitermes corniger, AB037327':0.00000
+)99:0.01938,
+'Nasutitermes ephratae, AB037328':0.03298
+)99:0.03366
+)46:0.00200,
+'Nasutitermes nigriceps, AB037329':0.04264
+)97:0.01782,
+'Nasutitermes walkeri, AB037332':0.06008
+)97:0.02811,
+(('Trinervitermes sp. Tx114, KT184474':0.03295,
+'Trinervitermes trinervoides|Eukaryota;, DQ442255':0.02907
+)94:0.01597,
+('Trinervitermes geminatus, DQ442256':0.02132,
+'Trinervitermes oeconomus, JF923242':0.04651
+)98:0.01796
+)100:0.04738
+)0:0.00604,
+('Velocitermes sp. Vx194, KT184475':0.05480,
+'Velocitermes velox, DQ442264':0.07558
+)99:0.01068
+)0:0.01793,
+'Atlantitermes sp. As202, KT184476':0.13953
+)82:0.01250,
+((((('Cubitermes fungifaber, DQ442112':0.04264,
+'Cubitermes umbratus, AB304487':0.05426
+)85:0.01623,
+'Apilitermes longiceps, DQ127313':0.06202
+)0:0.00601,
+'Cubitermes ugandensis Cu110, AIZ68260':0.06452
+)0:0.00401,
+'Basidentitermes mactus, DQ442091':0.06008
+)0:0.00200,
+'Ophiotermes sp. Ox79b, KT184477':0.07819
+)95:0.02422
+)0:0.02008,
+((((('Termes comis, DQ442250':0.05426,
+'Termes propinquus, AB109511':0.04264
+)92:0.01818,
+('Termes fatalis, DQ442251':0.00775,
+'Termes fatalis Tf192, KT184478':0.00765
+)100:0.05312
+)0:0.00598,
+('Termes hospes Th196, AIZ68312':0.02607,
+'Termes hospes, DQ442252':0.01938
+)100:0.07709
+)100:0.05025,
+((('Amitermes germanus, EF442703':0.01940,
+'Amitermes meridionalis, AB240434':0.02326
+)100:0.04331,
+'Amitermes heterognathus, DQ442067':0.04651
+)100:0.04600,
+('Promirotermes sp. Px188, KT184479':0.11973,
+'Promirotermes redundans, DQ442229':0.04457
+)99:0.02361
+)95:0.01007
+)67:0.00202,
+'Pericapritermes nitobei, DQ442218':0.08527
+)80:0.00000
+)26:0.00399,
+(((((('Microcerotermes nervosus, EF442695':0.04070,
+'Microcerotermes serratus, DQ442168':0.05620
+)89:0.01813,
+'Microcerotermes crassus, AB109503':0.05233
+)0:0.00000,
+'Microcerotermes parvus Mp193, AIZ68273':0.10376
+)90:0.01726,
+('Microcerotermes parvus, DQ442167':0.06395,
+'Microcerotermes sp. Mx118, KT184480':0.07171
+)97:0.02053
+)99:0.02608,
+(('Neocapritermes taracua Nt197, AIZ68299':0.00000,
+'Neocapritermes taracua, DQ442202':0.00581
+)100:0.07113,
+('Neocapritermes longinotus, DQ442199':0.03101,
+'Neocapritermes talpa, DQ442200':0.05039
+)100:0.02405
+)100:0.03804
+)0:0.00807,
+((('Cornitermes pugnax, DQ442106':0.02132,
+'Cornitermes sp. Cx191, AIZ68247':0.01744
+)98:0.03751,
+'Cornitermes bequaerti, AF149746':0.04845
+)0:0.01403,
+'Cornitermes walkeri, AB005577':0.06202
+)100:0.04204
+)0:0.00000
+)0:0.01388,
+'Labiotermes labralis, DQ442149':0.10078
+)0:0.01421,
+('Alyscotermes trestus At117, KT184481':0.07946,
+'Astalotermes murcus, DQ442084':0.06589
+)100:0.03516
+)98:0.01824,
+((((('Macrotermes michaelseni, AB304499':0.00000,
+('Macrotermes subhyalinus, JF923170':0.00324,
+'Macrotermes subhyalinus Ms115, KT184482':0.00000
+)81:0.00000
+)100:0.00000,
+'Macrotermes sp. Mx60, KT184483':0.00218
+)89:0.01766,
+'Macrotermes jeanneli, JF302856':0.02157
+)100:0.04395,
+'Macrotermes bellicosus, AB304491':0.07059
+)94:0.01434,
+(((('Odontotermes ceylonicus, DQ442207':0.03725,
+'Odontotermes formosanus, AB051876':0.03333
+)97:0.01011,
+'Odontotermes escherichi, DQ442208':0.03333
+)97:0.01994,
+'Odontotermes sp. Ox116, KT184484':0.07647
+)99:0.01436,
+'Microtermes obesi, AB109523':0.07843
+)41:0.00818
+)96:0.03838
+)95:0.04453,
+('Coptotermes niger, DQ442104':0.07752,
+'Reticulitermes virginicus, AF525357':0.10659
+)91:0.01466
+)89:0.03636,
+'Parrhinotermes queenslandicus, AB005585':0.13566
+)100:0.07345,
+((('Kalotermes brouni, AF189104':0.11046,
+'Kalotermes hilli, AF189101':0.10078
+)81:0.05069,
+'Neotermes castaneus, HQ215844':0.12209
+)95:0.02905,
+'Zootermopsis angusticollis, M83968':0.15891
+)0:0.01489
+)93:0.01461,
+'Mastotermes darwiniensis, AB014071':0.15504
+):0.07364,
+'Shelfordella lateralis, DQ442093':0.07364
+);
