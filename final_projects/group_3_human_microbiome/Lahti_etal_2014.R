@@ -1,7 +1,7 @@
 # Group 3. Microbiome data analysis (Lahti_etal_2014)
 
 # set working directory (yours would be different!!!)
-setwd("C:/Users/weiga/Dropbox/CSB-BIOL425/final_projects/group_2_human_microbiome/")
+setwd("C:/Users/weiga/Dropbox/CSB-BIOL425/final_projects/group_3_human_microbiome/")
 
 # make sure you're in the right directory
 getwd()
@@ -15,7 +15,7 @@ meta <- read_tsv("Metadata.tab")
 # To Do:
 # plot age distribution
 # plot nationality counts
-# plot diversity distribution (and explain)
+# plot diversity distribution (and explain: how diverse microbiome is individuals
 # plot BMI counts
 # select subjects with more than one time point
 
@@ -29,6 +29,7 @@ ct.long <- seq_cts %>%
 
 # Replicate Fig 1.
 bimodal_groups <- c( "Bacteroides fragilis et rel.",   "Prevotella melaninogenica et rel.", "Dialister", "Prevotella oralis et rel.",  "Uncultured Clostridium (sensu stricto)les I" , "Uncultured Clostridium (sensu stricto)les II")
+
 
 ct.bimodal <- ct.long %>% 
   filter(genus %in% bimodal_groups)
@@ -46,4 +47,10 @@ ct.bimodal %>%
 # Replicate Fig 6. Heatmap of combination
 
 # Replicate Fig 7. Heatmap of covariation
+# for Replicating Fig 7 heatmap
+all_groups <- colnames(seq_cts)[-1] # get all taxa names
+other_groups <- all_groups[!(all_groups %in% bimodal_groups)]
+cor.seq <- cor(log10(seq_cts[,-1])) # correlation for pairs of columns
+
+# Make a PCA of individuals color by BMI; or Sex
 

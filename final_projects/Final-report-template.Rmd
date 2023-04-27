@@ -1,0 +1,106 @@
+---
+title: "BIOL 425 Final Report: My Own 150-character-or-so Long Informative Take-Home-Message Title (Do not use the original article title; a summary of your own analysis)"
+author: "Your Name"
+date: "5/1/2023"
+output: 
+  word_document: 
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+# Introduction
+
+## Background
+
+Describe the research field & questions
+
+## Biological hypothesis
+
+Specific to your data analysis (not the general hypothesis of the paper)
+
+## Significance
+
+Why your question is important?
+
+# Materials and Methods
+
+## Samples
+
+Specify the nature, source of the biological samples, sample size, positive and negative controls (if any)
+
+## Experimental procedure
+
+Describe how the data were collected, e.g., the sequencing technology. Include computational protocols, e.g., software tools, R packages used to visualize and produce the data. Again, specific for your data set. Do NOT copy & paste from the paper
+
+## Statistical methods
+
+Describe the statistical hypothesis, the kind of statistical tests (e.g., t-test, ANOVA, regression, PCA), the specific R packages used
+
+# Exploratory data analysis
+
+Embed your R codes and show your work (code, plots, & comments)
+
+```{r warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# load libraries
+library(tidyverse)
+
+# load data
+data("iris")
+
+# peak data
+glimpse(iris)
+
+# boxplot to compare sepal length among species, which suggest significant differences that could be tested with an ANOVA
+iris %>% ggplot(aes(x = Species, y = Sepal.Length )) +
+  geom_boxplot() +
+  geom_jitter(shape = 1, width = 0.2) +
+  theme_bw() +
+  coord_flip()
+
+# scatter plot to compare sepal length versus sepal width, which suggest significant correlation that could be tested with linear regression
+iris %>% ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  facet_wrap(~Species) + 
+  theme_bw() 
+
+```
+
+# Results
+
+Show plots, each one with a legend/caption, explaining x- and y-axis, colors, points, sample sizes, and what's the story you want to tell a reader
+
+Make statistical conclusions
+
+# Conclusions
+
+## Biological conclusions
+Does the study answer the question raised in the beginning?
+State the NOVEL findings.
+
+## Future work
+What are the remaining questions to be answered? Suggest future work and directions. 
+
+# References
+
+## Cite paper
+
+List the full citation of the original paper, including DOI, e.g.,
+
+Ronald L. Wasserstein & Nicole A. Lazar (2016) The ASA Statement on
+p-Values: Context, Process, and Purpose, The American Statistician, 70:2, 129-133, DOI: 10.1080/00031305.2016.1154108
+
+## Cite code repository (if available)
+List the computational resource , e.g., the github link
+
+Computer codes & data: https://github.com/SchlossLab/Armour_Resolution_mBio_2021
+
+## Cite data file
+List the data source, e.g., the URL of the Excel sheet:
+
+Data set: https://genome.cshlp.org/content/suppl/2022/01/18/gr.275901.121.DC1/Supplemental_Table_S3.xls
+
+
