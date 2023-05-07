@@ -15,8 +15,8 @@ getwd()
 # install DESeq2 (run once only)
 #if (!require("BiocManager", quietly = TRUE))
 #  install.packages("BiocManager")
-library(BiocManager)
-BiocManager::install("DESeq2")
+#library(BiocManager)
+#BiocManager::install("DESeq2")
 
 # Answer "no" to the question "Do you want to install from source"
 
@@ -47,7 +47,7 @@ dds <- DESeq(de_obj)
 
 # get results
 res <- results(dds)
-
+resSig <- subset(res, padj < 0.1)
 ########################
 # To Do
 

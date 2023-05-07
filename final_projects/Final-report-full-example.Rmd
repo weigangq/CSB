@@ -1,8 +1,12 @@
 ---
-title: 'A search for a proper taxonomic resolution in order to accurately classify colorectal cancer'
+title: A search for a proper taxonomic resolution in order to accurately classify
+  colorectal cancer
 author: "Anonymous Student Contributor"
 date: "4/22/2022"
 output:
+  word_document:
+    toc: yes
+    toc_depth: '2'
   pdf_document:
     toc: yes
     toc_depth: '2'
@@ -42,6 +46,10 @@ Raw 16S rRNA gene amplicon sequences from 490 human stool samples, split into 26
 ## Experimental procedure
 
 The samples used in this work come from publicly available data and downloaded from NCBI. Each sample was then categorized into "normal" or "screen relevant neoplasia" categories. The taxonomic abundance tables were generated using Mothur. Then the machine learning models were run using the mikropml R package to learn a model classifying the data into one of the diagnosis categories. The performance of each model was then evaluated using the area under the receiver operator curve metric.
+
+## Software and statistical analysis
+
+The vocanoplot was used to visualize significance and fold change of RNAseq counts between samples. Statistical analysis was performed using the R/RStudio platform.
 
 # Results
 
@@ -112,7 +120,7 @@ It appears that the lower resolution at the ASV level of data does not provide f
 
 To further reinforce the point, a closer look at the results from one of the models is helpful and since the random forest model outperformed the other models, it can be examined. Figure 2 shows further the difference in the results and its mean when the model is trained on Family, Genus or OTU taxonomic levels and when trained on ASV level.
 
-```{r fig.cap = 'Random forest performance across taxas. The bars are the mean and the median and the black circles are each a result of 1 of 100 training runs.'}
+```{r fig.cap = 'Random forest performance across taxas. The x-axis represents taxonomical levels. The y-axis represents area under the curve (AUROC), a meausre of accuracy. The bars are the mean and the median and the black circles are each a result of 1 of 100 training runs. Different machine learning algorithms are distinguished by colors'}
 
 pal1 <- park_palette("Everglades")
 
@@ -133,6 +141,8 @@ df_all %>%
 
 # Conclusions
 
+Include both statistical conclusions (e.g., there are 100 genes that are significantly upregulated and 50 genes down-regulated) and biological conclusions (these genes could be used as biomarkers for identification of disease).
+
 Given the drop in model performance using the ASV taxonomic level, classifications screening for screen relevant neoplasia should continue to be done at the OTU levels instead. At least when using the five models tested in this work.
 
 ## Biological conclusions
@@ -145,8 +155,8 @@ This work tested five classification models only. There are other models that ma
 
 # References
 
-A Goldilocks Principle for the Gut Microbiome: Taxonomic Resolution
-Matters for Microbiome-Based Classification of Colorectal Cancer Armour, C. R., Topçuoğlu, B. D., Garretto, A., & Schloss, P. D. (2022). Mbio, 13(1), e03161-21; DOI: 10.1128/mbio.03161-21
+Armour, C. R., Topçuoğlu, B. D., Garretto, A., & Schloss, P. D. (2022)."A Goldilocks Principle for the Gut Microbiome: Taxonomic Resolution
+Matters for Microbiome-Based Classification of Colorectal Cancer".  MBio, 13(1), e03161-21; DOI: 10.1128/mbio.03161-21
 
 ## Code repository
 
