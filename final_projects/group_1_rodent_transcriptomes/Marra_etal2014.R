@@ -23,6 +23,7 @@ getwd()
 # load library
 library(tidyverse)
 library(DESeq2)
+library(pheatmap)
 
 # read count data
 rna_cts <- read.csv("Marra2014_count_table_spleen.tsv", sep = "\t", row.names = "gene_id")
@@ -47,7 +48,16 @@ dds <- DESeq(de_obj)
 
 # get results
 res <- results(dds)
-resSig <- subset(res, padj < 0.1)
+
+# filter by p-adjust
+resSig <- subset(res, padj < 1e-10)
+sig.genes <- rownames(resSig)
+sig.cts <- rna_cts[sig.genes,]
+hist(sig.cts) # not normal
+hist(log10(sig.cts +1)) # apply lgo10 to get normal distribution
+sig.cts.log <- log10(sig.cts+1) # transform the matrix
+pheatmap(sig.cts.log)
+
 ########################
 # To Do
 
